@@ -18,10 +18,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Poetry
-        run: |
-          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-          $HOME/.poetry/bin/poetry install
-          $HOME/.poetry/bin/poetry env use python${{ matrix.python-version }}
+        uses: snok/install-poetry@v1
       - name: Pytest
         run: |
           $HOME/.poetry/bin/poetry run pytest
