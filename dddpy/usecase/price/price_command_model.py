@@ -7,6 +7,7 @@ DASH = "-"
 DOLAR = "$"
 
 class PriceBaseModel(BaseModel):
+    """PricebaseModel represents data structure as a base calculate model."""
 
     code_area_from: str = Field(max_length=3, example="011")
     code_area_to: str = Field(max_length=3, example="016")

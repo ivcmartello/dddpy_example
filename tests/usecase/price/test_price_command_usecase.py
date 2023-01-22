@@ -10,7 +10,7 @@ from dddpy.infrastructure.sqlite.plan import PlanRepositoryImpl
 from dddpy.usecase.price import PriceCommandUseCaseImpl, PriceCalculateModel
 
 
-class TestBookQueryUseCase:
+class TestPriceCommandUseCase:
     def test_calculate_price_franchise_should_return_calculated_price(self):
         session = MagicMock()
         plan_repository = PlanRepositoryImpl(session)
